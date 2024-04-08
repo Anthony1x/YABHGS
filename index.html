@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>YABHGS</title>
+    </head>
+    <body>
+        <button id="infoButton" onclick="showInfo()">Info</button>
+        <div id="info">
+            <h1>Yet another Bullet Hell Game Simulator</h1>
+            <h2>Info</h2>
+            <h3>Abstrakt</h3>
+            <p>Gegner kommen von oben und schießen dich ab. Weiche aus. Schieß zurück.</p>
+            <h3>Steuerung</h3>
+            <p>Bewegen: WASD</p>
+            <p>Schießen: Leertaste</p>
+            <p>Instant Game-Over: Shift</p>
+            <h3>Score-Berechnung</h3>
+            <p>Jeder getötete Gegner gibt einem 10 Punkte</p>
+            <p>Score * Kills * (1,05^überlebte halbe Minuten)</p>
+            <h4>Beispiel</h4>
+            <p>Score: 320</p>
+            <p>Kills: 22</p>
+            <p>Überlebte halbe Minuten: 5</p>
+            <p>320 * 22 * 1,28 = 9011</p>
+            <h3>Auf dem Spielfeld</h3>
+            <p>
+                Die Space Invader sind Gegner und brauchen 20 Schüsse, um besiegt zu werden. <br />
+                Umso länger man überlebt, desto schneller werden ihre Schüsse.
+            </p>
+            <p>
+                Die Sterne sind Power-Ups. Sie verringern den Interval zwischen Schüssen,<br />
+                machen die Schüsse schneller und machen die Figur ebenfalls schneller.
+            </p>
+            <p>
+                Die Schraubenschlüssel(?) sind Leben. Zu Anfang hat man 3 Leben,<br />
+                aber über diese Items kann man sie auf bis zu 6 erweitern.
+            </p>
+        </div>
+        <div id="settings">
+            <p>Einstellungen</p>
+
+            <label for="volume">Lautstärke</label>
+            <input type="range" name="volume" min="0" max="10" id="volume" />
+        </div>
+        <div class="container">
+            <span id="debug"></span>
+            <canvas></canvas>
+            <div class="button">
+                <button onclick="resetGame()">Reset</button>
+                <button onclick="startGame()">Start</button>
+                <button onclick="stopGame()">Stop</button>
+            </div>
+        </div>
+        <script src="./js/classes.js"></script>
+        <script src="./js/objects.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
