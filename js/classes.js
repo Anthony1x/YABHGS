@@ -35,10 +35,12 @@ class Projectile {
         this.y = y;
         this.r = 5;
         this.c = 'rgba(255,255,255,1)';
+
         this.move = function (speedX, speedY) {
             this.x += speedX;
             this.y += speedY;
         };
+
         this.draw = function () {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);

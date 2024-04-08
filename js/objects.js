@@ -136,6 +136,7 @@ function normalize(x, y) {
         y: y,
     };
 }
+
 var lifes = [];
 function createLife() {
     lifes.push(new Life());

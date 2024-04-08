@@ -234,6 +234,7 @@ function handlePowerBall() {
     } else if (sPressed === true && ballY + ballR < canvas.height && !multiPress) {
         ballY += 6;
     }
+
     if (wPressed && aPressed && ballY - ballR > 0 && ballX - ballR > 0) {
         multiPress = true;
         ballY -= 6;
@@ -253,6 +254,7 @@ function handlePowerBall() {
     } else {
         multiPress = false;
     }
+
     if (spacePressed) {
         createProjectile();
     }
