@@ -90,7 +90,7 @@ function createEnProjectile(enX, enY) {
 function handleEnProjectile() {
     enemyProjectiles.forEach(function (currentEnProj, enPrIndex) {
         var enPrR = currentEnProj.r;
-        if (currentEnProj.x + enPrR < 0) {
+        if (currentEnProj.y + enPrR < 0) {
             enemyProjectiles.splice(enPrIndex, 1);
         } else if (currentEnProj.y + enPrR > canvas.height) {
             enemyProjectiles.splice(enPrIndex, 1);
@@ -222,9 +222,9 @@ function createProjectile() {
 function handleProjectile() {
     projectiles.forEach(function (currentProj, prIndex) {
         var prR = currentProj.r;
-        if (currentProj.x + prR < 0) {
+        if (currentProj.y + prR < 0) {
             projectiles.splice(prIndex, 1);
-        } else if (currentProj.x - prR > canvas.height) {
+        } else if (currentProj.y - prR > canvas.height) {
             projectiles.splice(prIndex, 1);
         } else {
             if (!powerUp) {
