@@ -127,9 +127,12 @@ function getPlayerDirection(ballX, ballY, enX, enY) {
 }
 
 function normalize(x, y) {
-    var length = Math.sqrt(x * x + y * y); //calculating length
-    x = x / length; //assigning new value to x (dividing x by length of the vector)
-    y = y / length; //assigning new value to
+    //calculating length
+    var length = Math.sqrt(x * x + y * y);
+    //assigning new value to x (dividing x by length of the vector)
+    x = x / length;
+    //assigning new value to
+    y = y / length;
 
     return {
         x: x,
